@@ -26,8 +26,3 @@ dist-ssr
 
 backup/
 .env
-
-# 3D Models (large files)
-*.glb
-*.gltf
-*.hdr

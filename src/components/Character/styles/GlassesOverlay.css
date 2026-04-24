@@ -1,0 +1,47 @@
+.glasses-overlay {
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  pointer-events: none;
+  width: 180px;
+  height: 70px;
+  transition: transform 0.1s ease-out;
+  opacity: 0;
+  animation: fadeInGlasses 1s ease-out 3s forwards;
+}
+
+.glasses-svg {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.5));
+}
+
+@keyframes fadeInGlasses {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  100% {
+    opacity: 0.85;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 768px) {
+  .glasses-overlay {
+    width: 140px;
+    height: 55px;
+    top: 36%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .glasses-overlay {
+    width: 120px;
+    height: 48px;
+    top: 35%;
+  }
+}
